@@ -7,7 +7,7 @@
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
-One simple example using JepPack Compose and Hilt, including a list page and details page for dogs.
+One simple example using JetPack Compose and Hilt, including a list page and details page for dogs.
 
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->

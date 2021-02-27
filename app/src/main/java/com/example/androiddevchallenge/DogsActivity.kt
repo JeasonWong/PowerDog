@@ -20,7 +20,13 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Button
@@ -83,11 +89,13 @@ fun ImageListItem(dog: Dog, context: Context) {
                     style = MaterialTheme.typography.subtitle1
                 )
                 Spacer(Modifier.height(10.dp))
-                Button(onClick = {
-                    val intent = Intent(context, DogDetailActivity::class.java)
-                    intent.putExtra("dog", dog)
-                    context.startActivity(intent)
-                }) {
+                Button(
+                    onClick = {
+                        val intent = Intent(context, DogDetailActivity::class.java)
+                        intent.putExtra("dog", dog)
+                        context.startActivity(intent)
+                    }
+                ) {
                     Text(text = "More Detail")
                 }
             }
