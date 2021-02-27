@@ -79,7 +79,7 @@ fun ImageListItem(dog: Dog, context: Context) {
                 Text(
                     text = dog.desc,
                     overflow = TextOverflow.Ellipsis,
-                    maxLines = 4,
+                    maxLines = 5,
                     style = MaterialTheme.typography.subtitle1
                 )
                 Spacer(Modifier.height(10.dp))
@@ -88,7 +88,7 @@ fun ImageListItem(dog: Dog, context: Context) {
                     intent.putExtra("dog", dog)
                     context.startActivity(intent)
                 }) {
-                    Text(text = "了解更多")
+                    Text(text = "More Detail")
                 }
             }
         }
