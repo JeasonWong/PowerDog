@@ -1,14 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.example.androiddevchallenge"
-        minSdkVersion 23
+        applicationId "me.wangyuwei.powerdog"
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -73,6 +75,10 @@ dependencies {
     implementation "androidx.compose.material:material-icons-extended:$compose_version"
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
+    implementation "dev.chrisbanes.accompanist:accompanist-glide:0.6.0"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "com.google.dagger:hilt-android:2.32-alpha"
+    kapt "com.google.dagger:hilt-compiler:2.32-alpha"
 
     testImplementation 'junit:junit:4.13.2'
 
